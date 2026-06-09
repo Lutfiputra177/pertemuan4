@@ -7,62 +7,72 @@
 </head>
 <body>
     <h1>belajar java script</h1>
-    <script>   
-        // let a = 10;
-        // console.log(a);
-        // a = 12;
-        // console.log(a);
-       
+    <script>
 
-        // let nama = prompt("masukan nama anda");
-        // alert("hai " + nama);
-
-        // let b = confirm();
-        // console.log(b);
-       
-        // a = 20
-        // b = 30
-        // alert(a + b);
-
-
-    //fungsi permainan
     function mygame() {
         let mulai;
 
         while (true) {
             let lanjut = confirm("mau main kau?");
 
-            if (lanjut ==true) {
+            if (lanjut == true) {
 
-                let nama = prompt("pake nama kau dulu?"); 
-                    alert("hai " + nama);
-                    alert("kamu harus menjawab pertanyaan ini dengan benar untuk bisa lanjut ke pertanyaan selanjutnya");
+                let nama = prompt("pake nama kau dulu?");
+                alert("salken " + nama);
+                alert("kamu harus menjawab pertanyaan ini dengan benar untuk bisa lanjut ke pertanyaan selanjutnya\nkamu punya 10 detik per soal");
 
-                let quest1 = prompt("berapa hasil dari 3 + 2?");
-                if (quest1 == "5") {
+                // soal 1
+                let start1 = Date.now();
+                let quest1 = prompt("berapa hasil dari 3 + 2?\n\n(kamu punya 10 detik, ga bisa telp aja abang!)");
+                let elapsed1 = (Date.now() - start1) / 1000;
+
+                if (elapsed1 > 10) {
+                    alert("lama kali jawabnya");
+                    break;
+                } else if (quest1 == "5") {
                     alert("pintar");
                 } else {
                     alert("bodoh");
                     break;
                 }
 
+                // soal 2
+                let start2 = Date.now();
+                let quest2 = prompt("berapa hasil dari 2 x 2?\n\n(kamu punya 10 detik,cepat yee!)");
+                let elapsed2 = (Date.now() - start2) / 1000;
 
-                let quest2 = prompt("berapa hasil dari 2 x 2?");
-                if (quest2 == "4") {
+                if (elapsed2 > 10) {
+                    alert("heum lama ihh 😞");
+                    break;
+                } else if (quest2 == "4") {
                     alert("hebat🥵");
                 } else {
                     alert("longorrrrrrrrrrrrrrrrrrrrrrrr");
                     break;
                 }
-            }else {
+
+                     // soal 3
+                let start3 = Date.now();
+                let quest3 = prompt("apa ibu kota indonesia?\n\n(kamu punya 10 detik,cepat yee!)");
+                let elapsed3 = (Date.now() - start2) / 1000;
+
+                if (elapsed3 > 10) {
+                    alert("heum lama ihh 😞");
+                    break;
+                } else if (quest3 == "jakarta") {
+                    alert("hebat🥵");
+                } else {
+                    alert("longorrrrrrrrrrrrrrrrrrrrrrrr");
+                    break;
+                }
+
+            } else {
                 alert("males lah");
                 alert(mulai);
                 break;
             }
         }
-    }   
-
-
+    }
 
     </script>
 
