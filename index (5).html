@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>belajar java script</h1>
+    <script>   
+        // let a = 10;
+        // console.log(a);
+        // a = 12;
+        // console.log(a);
+       
+
+        // let nama = prompt("masukan nama anda");
+        // alert("hai " + nama);
+
+        // let b = confirm();
+        // console.log(b);
+       
+        // a = 20
+        // b = 30
+        // alert(a + b);
+
+
+    //fungsi permainan
+    function mygame() {
+        let mulai;
+
+        while (true) {
+            let lanjut = confirm("mau main kau?");
+
+            if (lanjut ==true) {
+
+                let nama = prompt("pake nama kau dulu?"); 
+                    alert("hai " + nama);
+                    alert("kamu harus menjawab pertanyaan ini dengan benar untuk bisa lanjut ke pertanyaan selanjutnya");
+
+                let quest1 = prompt("berapa hasil dari 3 + 2?");
+                if (quest1 == "5") {
+                    alert("pintar");
+                } else {
+                    alert("bodoh");
+                    break;
+                }
+
+
+                let quest2 = prompt("berapa hasil dari 2 x 2?");
+                if (quest2 == "4") {
+                    alert("hebat🥵");
+                } else {
+                    alert("longorrrrrrrrrrrrrrrrrrrrrrrr");
+                    break;
+                }
+            }else {
+                alert("males lah");
+                alert(mulai);
+                break;
+            }
+        }
+    }   
+
+
+
+    </script>
+
+    <button onclick="mygame()">bismillah jadi game besar</button>
+</body>
+</html>
